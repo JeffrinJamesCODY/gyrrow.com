@@ -202,6 +202,11 @@ html, body {
 }
 
 .GyFooterLogo {
-  height: 60px;
+  height: clamp(20px, 2.5vw, 32px);
+  width: auto;
+}
+
+.OnlineTag {
+  height: clamp(18px, 2vw, 28px);
   width: auto;
 }
