@@ -1,157 +1,190 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root {
-    --accent: #f49a6a;
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.GyHeader {
+  position: fixed;
+  display: flex;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  padding: 3px 50px;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.36);
 }
 
-
-body {
-    background-color: #1a1515;
-    font-family: Cascadia Code, monospace;
+.GyNav {
+  display:flex;
+  align-items: center;
+  gap: 100px;
 }
 
-
-.content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.GyNavLink1, .GyNavLink2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 89px;
-    padding-top: 50px;
+.GyNavLink1:hover, .GyNavLink2:hover {
+  color: #ffc400;
+}
+.GyLogo {
+  padding-top: 3px;
+  width: 60px;
+  height: 60px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 0.95rem;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0.2rem;
-    transition: 0.2s ease;
+.GyVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  z-index: 0;
+}
+.GyHero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 7vw 12vh;
 }
 
-nav a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
+.HeroFirst, .HeroSecond {
+  font-family: 'Instrument Serif', serif;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 96px;
+  font-weight: bold;
+  left: 148px;
+  top: 387px;
+
+  color: rgba(255, 255, 255, 0.4);
+  
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.5);
+  
+  text-shadow:
+    -2px -2px 4px rgba(255, 255, 255, 0.6),
+    -1px -1px 2px rgba(255, 255, 255, 0.4),
+    
+    0px -1px 0px rgba(255, 255, 255, 0.8),
+    
+    2px 2px 6px rgba(0, 0, 0, 0.5),
+    1px 1px 3px rgba(0, 0, 0, 0.4),
+    
+    0px 0px 20px rgba(255, 255, 255, 0.15),
+    0px 0px 8px rgba(255, 255, 255, 0.1);
+}
+.HeroSecond {
+  top: 487px;
 }
 
-
-.maintext {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    margin-top: 100px;
-
-    font-size: 70px;
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    transition: 0.3s ease;
+.GyBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 35%, black);
+  z-index: 1;
+}
+.GyScrolled {
+  position: relative;
+  background-image: url('assets/backimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.maintext:hover {
-    color: var(--accent);
+.GyScrolled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(1px) brightness(0.09);
+  -webkit-backdrop-filter: blur(1px) brightness(0.09);
+}
+.soph {
+  font-family: 'Instrument Serif', serif;
+  font-size: 70px;
+  top: 245px;
+  left: 20%;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+
 }
 
-/* SUBTEXT (optional future use) */
-.subtext1group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+.westCenter {
+  font-family: 'Instrument Serif', serif;
+  font-size: 70px;
+  left: 30%;
+  top: 250px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.GyFooterContainer {
+  position:absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 130px;
+  top: 86%;
+  margin-top: auto;
+}
+.theline {
+  border: 1px solid white;
+  width: 95%;
+  margin: 0 auto;
 }
 
-.subtext1 {
-    font-size: 20px;
-    font-weight: lighter;
-    color: #ffffff;
-    transition: 0.3s ease;
+.GyFooterText {
+  font-family: 'Instrument Serif', serif;
+  display: block;
+  font-size: 20px;
+  top: 40px;
+  position: relative;
+  margin-left: 50px;
+  color: #ffffff;
 }
 
-.subtext1:hover {
-    color: #daffda;
-}
-.subtext2 {
-    font-size: 20px;
-    font-weight: lighter;
-    color: #ffffff;
-    transition: 0.3s ease;
-    padding-top: 10px;
+.GyFooterLogo {
+  display: block;
+  margin-left: 12%;
 }
 
-.background {
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-
-.bg-shape {
-    position: absolute;
-    border-radius: 3rem;
-    animation: gradient 4s infinite;
-}
-
-.bg-shape:nth-child(1) {
-    width: 100%;
-    height: 100%;
-    background-color: #1a1515;
-    border-radius: 0;
-}
-
-
-.bg-shape:nth-child(2) {
-    height: 80%;
-    width: 70%;
-    background-color: #5c5454;
-    top: -20%;
-    left: -25px;
-    animation-delay: 2s;
-}
-
-.bg-shape:nth-child(3) {
-    height: 60%;
-    width: 50%;
-    background-color: #9ca29c;
-    top: -20%;
-    right: -25px;
-    animation-delay: 1s;
-}
-
-@keyframes gradient {
-    50% {
-        transform: scale(1.5) translate(100px, 60px);
-    }
-}
-
-.background::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(200px);
-    -webkit-backdrop-filter: blur(200px);
-    z-index: 1;
+.OnlineTag {
+  display: inline-block;
+  margin-left: 91%;
+  margin-top: -60px;
+  vertical-align: middle;
 }
