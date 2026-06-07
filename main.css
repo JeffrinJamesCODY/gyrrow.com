@@ -133,3 +133,23 @@ html, body {
   backdrop-filter: blur(1px) brightness(0.09);
   -webkit-backdrop-filter: blur(1px) brightness(0.09);
 }
+.soph {
+  font-family: 'Instrument Serif', serif;
+  font-size: 70px;
+  top: 245px;
+  left: 20%;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+
+}
+
+.westCenter {
+  font-family: 'Instrument Serif', serif;
+  font-size: 70px;
+  left: 30%;
+  top: 250px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
