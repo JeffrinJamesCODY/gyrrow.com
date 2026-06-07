@@ -104,3 +104,13 @@ html, body {
 .HeroSecond {
   top: 487px;
 }
+
+.GyBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 35%, black);
+  z-index: 1;
+}
