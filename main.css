@@ -30,12 +30,12 @@ html, body {
 .GyNav {
   display:flex;
   align-items: center;
-  gap: 100px;
+  gap: clamp(20px, 6vw, 100px);
 }
 
 .GyNavLink1, .GyNavLink2 {
   font-family: 'Instrument Serif', serif;
-  font-size: 24px;
+  font-size: clamp(16px, 2vw, 24px);
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -44,10 +44,11 @@ html, body {
 .GyNavLink1:hover, .GyNavLink2:hover {
   color: #ffc400;
 }
+
 .GyLogo {
   padding-top: 3px;
-  width: 60px;
-  height: 60px;
+  width: clamp(36px, 5vw, 60px);
+  height: clamp(36px, 5vw, 60px);
 }
 
 .GyVideo {
@@ -60,6 +61,8 @@ html, body {
   filter: brightness(0.5);
   z-index: 0;
 }
+
+
 .GyHero {
   position: relative;
   width: 100%;
@@ -69,6 +72,7 @@ html, body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 7vw 12vh;
+  z-index: 1;
 }
 
 .HeroFirst, .HeroSecond {
@@ -76,14 +80,11 @@ html, body {
   position: absolute;
   z-index: 2;
   color: #fff;
-  font-size: 96px;
-  font-weight: bold;
-  left: 148px;
-  top: 387px;
+  font-size: clamp(2rem, 5vw, 6rem);
+  left: 10vw;
+  top: 42vh;
 
   color: rgba(255, 255, 255, 0.4);
-  
-  font-size: clamp(3rem, 7vw, 6rem);
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.1;
@@ -102,7 +103,7 @@ html, body {
     0px 0px 8px rgba(255, 255, 255, 0.1);
 }
 .HeroSecond {
-  top: 487px;
+  top: 52vh;
 }
 
 .GyBox {
@@ -114,6 +115,7 @@ html, body {
   background: linear-gradient(transparent 35%, black);
   z-index: 1;
 }
+
 .GyScrolled {
   position: relative;
   background-image: url('assets/backimg.png');
@@ -124,6 +126,7 @@ html, body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .GyScrolled::before {
@@ -133,62 +136,72 @@ html, body {
   backdrop-filter: blur(1px) brightness(0.09);
   -webkit-backdrop-filter: blur(1px) brightness(0.09);
 }
+
 .GyScrolledText {
   position: relative;
   text-align: center;
+  z-index: 1;
+  padding: 0 5%;
+  margin-top: 20vh;
 }
-.soph {
+
+.soph, .westCenter {
   font-family: 'Instrument Serif', serif;
-  font-size: 70px;
-  top: 245px;
-  left: 20%;
+  font-size: clamp(1.8rem, 5vw, 70px);
   position: relative;
   z-index: 1;
   color: #ffffff;
-
+  text-align: center;
+  padding: 0 5%;
 }
 
-.westCenter {
-  font-family: 'Instrument Serif', serif;
-  font-size: 70px;
-  left: 30%;
-  top: 250px;
-  position: relative;
-  z-index: 1;
-  color: #fff;
+.soph {
+  margin-top: 20vh;
+  color: #ffffff;
+
 }
 .GyFooterContainer {
-  position:absolute;
+  position: relative;
   background-color: transparent;
   width: 100%;
-  height: 130px;
-  top: 86%;
   margin-top: auto;
+  padding: 0 2.5%;
+  padding-bottom: 20px;
+}
+
+.GyFooterInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  gap: 20px;
+}
+
+.GyFooterLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.GyFooterRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .theline {
-  border: 1px solid white;
-  width: 95%;
-  margin: 0 auto;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .GyFooterText {
   font-family: 'Instrument Serif', serif;
-  display: block;
-  font-size: 20px;
-  top: 40px;
-  position: relative;
-  margin-left: 50px;
+  font-size: clamp(12px, 1.5vw, 20px);
   color: #ffffff;
 }
 
 .GyFooterLogo {
-  display: block;
-  margin-left: 12%;
-}
-
-.OnlineTag {
-  display: inline-block;
-  margin-left: 91%;
-  margin-top: -60px;
-  vertical-align: middle;
+  height: 60px;
+  width: auto;
 }
