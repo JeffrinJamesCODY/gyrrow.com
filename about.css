@@ -113,3 +113,95 @@ html, body {
     background: linear-gradient(transparent, 35%, black);
     z-index: 1;
 }
+.GyScrolled {
+    position: relative;
+    background-image: url('assets/backimg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no repeat;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.GyScrolled::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(1px) brightness(0.09);
+    -webkit-backdrop-filter: blur(1px) brightness(0.09);
+}
+
+.GyScrolledText {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 0 5%;
+    margin-top: 20vh;
+}
+
+.soph {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(1.8rem, 5vw, 70px);
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 5%;
+    margin-top: 20vh;
+
+}
+
+.GyFooterContainer {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  margin-top: auto;
+  padding: 0 2.5%;
+  padding-bottom: 20px;
+}
+
+.GyFooterInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  gap: 20px;
+}
+
+.GyFooterLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.GyFooterRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.theline {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.GyFooterText {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(12px, 1.5vw, 20px);
+  color: #ffffff;
+}
+
+.GyFooterLogo {
+  height: clamp(20px, 2.5vw, 32px);
+  width: auto;
+}
+
+.OnlineTag {
+  height: clamp(18px, 2vw, 28px);
+  width: auto;
+}
+
