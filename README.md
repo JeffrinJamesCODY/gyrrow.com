@@ -10,6 +10,8 @@ This repository is where we are building Gyrrow's Website
 
 #### WARNING : Press is under development as stated in website currently while About and Home page has been updated.
 
+### Adobe Premiere Pro was used to build the video, all logos and creatives are Gyrrow's property, we used https://github.com/miketromba/css.glass to build glassmorphism
+
 <img width="1919" height="990" alt="Screenshot 2026-06-30 014237" src="https://github.com/user-attachments/assets/6b37e05d-1879-44d4-b491-002ef0aa1fdd" />
 <img width="1919" height="985" alt="Screenshot 2026-06-30 015121" src="https://github.com/user-attachments/assets/93ab7a8b-cb08-4a11-8034-aaaf2481c31c" />
 
